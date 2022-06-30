@@ -5,11 +5,10 @@ const AccordionItem = ({
   order,
   content,
   contentElement,
-  height,
   isOpened,
 }) => {
   return (
-    <div className="border border-indigo-400 rounded bg-gray-100">
+    <div className="border border-indigo-400 rounded bg-gray-100  w-full">
       <div className="flex flex-row items-center">
         <div className="text-white bg-indigo-400 p-2">{order}</div>
         <div className="flex flex-row justify-between w-full p-2">

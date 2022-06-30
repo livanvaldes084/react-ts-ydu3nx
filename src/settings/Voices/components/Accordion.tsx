@@ -23,7 +23,9 @@ const Accordion = ({ title, order, content }: AccordionProps) => {
   const contentItems = content?.description
     ? content?.description
     : content.data.map((item) => (
-        <AccordionItem title={item.title} order={item.order} />
+        <div className="p-1">
+          <AccordionItem title={item.title} order={item.order} />
+        </div>
       ));
 
   return (
@@ -66,7 +68,6 @@ const Accordion = ({ title, order, content }: AccordionProps) => {
         content={contentItems}
         order={order}
         contentElement={contentElement}
-        height={height}
         isOpened={isOpened}
       />
     </div>

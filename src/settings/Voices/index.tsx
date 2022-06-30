@@ -19,6 +19,22 @@ export default function Voice() {
         ],
       },
     },
+    {
+      title: '"Para citas, marque el 1"',
+      order: 2,
+      content: {
+        data: [
+          {
+            title: '"Para citas, marque el 1"',
+            order: 1,
+          },
+          {
+            title: '"Para citas, marque el 1"',
+            order: 2,
+          },
+        ],
+      },
+    },
   ];
   return (
     <div className="p-12">
