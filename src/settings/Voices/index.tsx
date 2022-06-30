@@ -6,14 +6,18 @@ export default function Voice() {
     {
       title: '"Para citas, marque el 1"',
       order: 1,
-      content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nesciunt beatae debitis delectus pariatur nostrum maiores magni quibusdam officia tempore quis ea molestiae ducimus error nemo, tenetur possimus, earum illo.',
-    },
-    {
-      title: '"Para nuestros horarios y dirección, marque 2"',
-      order: 2,
-      content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nesciunt beatae debitis delectus pariatur nostrum maiores magni quibusdam officia tempore quis ea molestiae ducimus error nemo, tenetur possimus, earum illo. Impedit nesciunt beatae debitis delectus pariatur nostrum maiores magni quibusdam officia tempore quis ea molestiae ducimus error nemo, tenetur possimus, earum illo.',
+      content: {
+        data: [
+          {
+            title: '"Para citas, marque el 1"',
+            order: 1,
+          },
+          {
+            title: '"Para citas, marque el 1"',
+            order: 2,
+          },
+        ],
+      },
     },
   ];
   return (
