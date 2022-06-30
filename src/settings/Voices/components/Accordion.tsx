@@ -3,9 +3,10 @@ import { useState, useRef } from 'react';
 
 type AccordionProps = {
   title: string;
+  order: number;
   content: string;
 };
-const Accordion = ({ title, content }: AccordionProps) => {
+const Accordion = ({ title, order, content }: AccordionProps) => {
   const [isOpened, setOpened] = useState<boolean>(false);
   const [height, setHeight] = useState<string>('0px');
   const contentElement = useRef(null);
@@ -15,8 +16,8 @@ const Accordion = ({ title, content }: AccordionProps) => {
     setHeight(!isOpened ? `${contentElement.current.scrollHeight}px` : '0px');
   };
   return (
-    <div className="flex flex-row">
-      <div onClick={HandleOpening} className="mt-4">
+    <div className="flex flex-row bg-gray-100">
+      <div onClick={HandleOpening} className="mt-3">
         {isOpened ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -49,18 +50,36 @@ const Accordion = ({ title, content }: AccordionProps) => {
           </svg>
         )}
       </div>
-      <div>
-        <div className="border border-indigo-400 rounded">
-          <div className={'bg-indigo-300 p-4 flex justify-between text-white'}>
-            <h4 className="font-semibold">{title}</h4>
-          </div>
-          <div
-            ref={contentElement}
-            style={{ height: height }}
-            className="bg-gray-200 overflow-hidden transition-all duration-200"
+      <div className="border border-indigo-400 rounded">
+        <div className="flex flex-row justify-between">
+          <div className="text-white bg-indigo-400 p-2">{order}</div>
+          <h4 className="text-blue-500">{title}</h4>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
           >
-            <p className="p-4">{content}</p>
-          </div>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+            />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </div>
+        <div
+          ref={contentElement}
+          style={{ height: height }}
+          className="overflow-hidden transition-all duration-200"
+        >
+          <p className="p-4">{content}</p>
         </div>
       </div>
     </div>
