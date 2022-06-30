@@ -53,7 +53,7 @@ const Accordion = ({ title, order, content }: AccordionProps) => {
       <div className="border border-indigo-400 rounded">
         <div className="flex flex-row items-center">
           <div className="text-white bg-indigo-400 p-2">{order}</div>
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row justify-between w-full p-2">
             <h4 className="text-blue-500">{title}</h4>
             <svg
               xmlns="http://www.w3.org/2000/svg"
