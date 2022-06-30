@@ -4,21 +4,20 @@ import Accordion from './components/Accordion';
 export default function Voice() {
   const data = [
     {
-      title: 'How much do i need to pay for this?',
+      title: '"Para citas, marque el 1"',
       order: 1,
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nesciunt beatae debitis delectus pariatur nostrum maiores magni quibusdam officia tempore quis ea molestiae ducimus error nemo, tenetur possimus, earum illo.',
     },
     {
-      title: 'Can i delete my account?',
+      title: '"Para nuestros horarios y dirección, marque 2"',
       order: 2,
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nesciunt beatae debitis delectus pariatur nostrum maiores magni quibusdam officia tempore quis ea molestiae ducimus error nemo, tenetur possimus, earum illo. Impedit nesciunt beatae debitis delectus pariatur nostrum maiores magni quibusdam officia tempore quis ea molestiae ducimus error nemo, tenetur possimus, earum illo.',
     },
   ];
   return (
-    <div>
-      <h2 className="text-4xl">BrainHi Voice IVR</h2>
+    <div className="p-12">
       <div className="flex flex-col container gap-4">
         {data.map((item) => (
           <Accordion

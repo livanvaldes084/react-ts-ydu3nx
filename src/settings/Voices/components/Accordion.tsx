@@ -16,7 +16,7 @@ const Accordion = ({ title, order, content }: AccordionProps) => {
     setHeight(!isOpened ? `${contentElement.current.scrollHeight}px` : '0px');
   };
   return (
-    <div className="flex flex-row bg-gray-100">
+    <div className="flex flex-row ">
       <div onClick={HandleOpening} className="mt-3">
         {isOpened ? (
           <svg
@@ -50,7 +50,7 @@ const Accordion = ({ title, order, content }: AccordionProps) => {
           </svg>
         )}
       </div>
-      <div className="border border-indigo-400 rounded">
+      <div className="border border-indigo-400 rounded bg-gray-100">
         <div className="flex flex-row items-center">
           <div className="text-white bg-indigo-400 p-2">{order}</div>
           <div className="flex flex-row justify-between w-full p-2">
