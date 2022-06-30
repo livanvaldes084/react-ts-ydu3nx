@@ -51,7 +51,11 @@ const Accordion = ({ title, order, content }: AccordionProps) => {
         )}
       </div>
       <div className="border border-indigo-400 rounded bg-gray-100">
-        <div className="flex flex-row items-center">
+        <div
+          className={`flex flex-row items-center ${
+            isOpened && 'border-indigo-400 border-b'
+          }`}
+        >
           <div className="text-white bg-indigo-400 p-2">{order}</div>
           <div className="flex flex-row justify-between w-full p-2">
             <h4 className="text-blue-500">{title}</h4>
